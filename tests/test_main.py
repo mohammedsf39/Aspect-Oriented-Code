@@ -4,19 +4,19 @@ from src.add_product_task import AddProductUseCase
 
 
 def test_add_product_should_return_product_added():
-    task = AddProductUseCase()
-    assert task.preform_use_case() == "Product added successfully!"
+    use_case = AddProductUseCase()
+    assert use_case.preform_use_case() == "Product added successfully!"
 
 
 def test_add_product_should_check_authentication():
-    task = AddProductUseCase()
-    aspect = AuthenticationAspect(task)
+    use_case = AddProductUseCase()
+    aspect = AuthenticationAspect(use_case)
     assert aspect.preform_use_case() == "User has privileges.\nProduct added successfully!"
 
 
 def test_add_product_should_log_and_check_authentication():
-    task = AddProductUseCase()
-    aspect = AuthenticationAspect(task)
+    use_case = AddProductUseCase()
+    aspect = AuthenticationAspect(use_case)
     aspect = LoggingAspect(aspect)
     assert (
         aspect.preform_use_case()
