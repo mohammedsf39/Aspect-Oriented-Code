@@ -1,8 +1,8 @@
 from typing import Any
 
-from src.task_interface import TaskInterface
+from src.task_interface import UseCaseInterface
 
 
-class AddProductTask(TaskInterface):
-    def preform_task(self) -> Any:
+class AddProductUseCase(UseCaseInterface):
+    def preform_use_case(self) -> Any:
         return "Product added successfully!"

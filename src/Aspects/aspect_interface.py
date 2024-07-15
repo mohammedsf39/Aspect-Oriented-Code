@@ -1,16 +1,16 @@
 from abc import ABCMeta, abstractmethod
 from typing import Any
 
-from src.task_interface import TaskInterface
+from src.task_interface import UseCaseInterface
 
 
-class AspectInterface(TaskInterface, metaclass=ABCMeta):
-    def __init__(self, task: TaskInterface):
-        self.task: TaskInterface = task
+class AspectInterface(UseCaseInterface, metaclass=ABCMeta):
+    def __init__(self, use_case: UseCaseInterface):
+        self.use_case: UseCaseInterface = use_case
 
-    def preform_task(self) -> Any:
-        return self.aspect_task() + "\n" + self.task.preform_task()
+    def preform_use_case(self) -> Any:
+        return self.aspect_logic_implementation() + "\n" + self.use_case.preform_use_case()
 
     @abstractmethod
-    def aspect_task(self):
+    def aspect_logic_implementation(self):
         pass

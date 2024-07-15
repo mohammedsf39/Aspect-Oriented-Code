@@ -2,7 +2,7 @@ from abc import ABCMeta, abstractmethod
 from typing import Any
 
 
-class TaskInterface(metaclass=ABCMeta):
+class UseCaseInterface(metaclass=ABCMeta):
     @abstractmethod
-    def preform_task(self) -> Any:
+    def preform_use_case(self) -> Any:
         pass
