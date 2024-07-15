@@ -1,6 +1,6 @@
 from src.Aspects.authentication_aspect import AuthenticationAspect
 from src.Aspects.logging_aspect import LoggingAspect
-from src.add_product_task import AddProductUseCase
+from src.add_product_use_case import AddProductUseCase
 
 
 def test_add_product_should_return_product_added():

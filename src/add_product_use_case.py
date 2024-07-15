@@ -1,6 +1,6 @@
 from typing import Any
 
-from src.task_interface import UseCaseInterface
+from src.use_case_interface import UseCaseInterface
 
 
 class AddProductUseCase(UseCaseInterface):

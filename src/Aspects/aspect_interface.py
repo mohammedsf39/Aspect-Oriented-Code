@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractmethod
 from typing import Any
 
-from src.task_interface import UseCaseInterface
+from src.use_case_interface import UseCaseInterface
 
 
 class AspectInterface(UseCaseInterface, metaclass=ABCMeta):
